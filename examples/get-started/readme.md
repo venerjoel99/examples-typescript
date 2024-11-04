@@ -1,22 +1,46 @@
-# Run Restack in Docker
-docker run -d --pull always --name studio -p 5233:5233 -p 6233:6233 -p 7233:7233 ghcr.io/restackio/engine:main
+# Restack Get Started
 
-# Open the Desktop UI
-http://localhost:5233
+A sample repository, which demonstrates working with Restack Framework and optional Restack OpenAI integration.
 
-# Clone starter repo
-git clone https://github.com/restackio/sdk-ts-examples/
+For a full Typescript documentation refer to <https://docs.restack.io/libraries/typescript/reference>
 
-cd sdk-ts-examples/examples/get-started
+## Requirements
 
-# Install dependencies
-npm i
+- **Node 20+**, **pnpm** (or other package manager)
 
-# Run your service in the background
-npm run service
+## Install dependencies and start services
 
-# Schedule the workflow
-npm run schedule
+```bash
+pnpm i
+pnpm dev
+```
 
-# Check the Desktop UI to see your workflow executed
-http://localhost:5233
+This will start Node.js app with two Restack Services. Your code will be running and syncing with Restack engine to execute workflows or functions.
+
+## Start Restack Studio
+
+To start the Restack Studio, you can use Docker.
+
+```bash
+docker run -d --pull always --name studio -p 5233:5233 -p 6233:6233 -p 7233:7233 ghcr.io/restackio/restack:main
+```
+
+## Schedule a demo Workflow
+
+```bash
+pnpm schedule-workflow
+```
+
+This will trigger a demo Workflow - a _greeting_, which is a simple function and _goodbye_, which uses [@restackio/integration-openai](https://www.npmjs.com/package/@restackio/integrations-openai).
+
+## Deploy on Restack Cloud
+
+``` bash
+pnpm restack-up
+```
+
+To deploy the application on Restack, you can use the provided `restackUp.ts` script. This script utilizes the Restack Cloud SDK to define and deploy your application stack. It sets up the necessary environment variables and configures the application for deployment.
+
+To get started, ensure you have the required Restack Cloud credentials and environment variables set up. Then, run the script to initiate the deployment process.
+
+For more detailed information on deploying your repository to Restack, refer to the [Restack Cloud deployment documentation](https://docs.restack.io/restack-cloud/deployrepo).
