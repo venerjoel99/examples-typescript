@@ -1,5 +1,4 @@
 import { goodbye } from "./functions";
-import { openaiService } from "@restackio/integrations-openai";
 import { client } from "./client";
 
 async function services() {
