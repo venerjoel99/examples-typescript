@@ -36,8 +36,12 @@ The server should be up at http://localhost:8000
 ## Send a test request to the chatCompletionBasic workflow
 
 ```
-curl -X POST http://localhost:8000 -H "Content-Type: application/json" -d '{"workflowName": "chatCompletionBasic", "workflowId": "chatCompletionBasic-123", "name": "John"}'
+curl -X POST http://localhost:8000 -H "Content-Type: application/json" -d '{"workflowName": "chatCompletionBasic", "workflowId": "chatCompletionBasic", "input": {"name": "Martin"}}'
 ```
+
+## Test the simple RAG workflow for Llamaindex
+
+curl -X POST http://localhost:8000 -H "Content-Type: application/json" -d '{"workflowName": "llamaindexTogetherSimple", "workflowId": "llamaindexTogetherSimple-123"}'
 
 ## Build and Run Docker Container
 

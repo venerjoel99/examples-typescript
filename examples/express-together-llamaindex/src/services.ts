@@ -1,5 +1,5 @@
 // Simple example to start two services in the same file
-import { togetherChatCompletionBasic } from "./functions";
+import { togetherChatCompletionBasic, llamaIndexQueryTogether } from "./functions";
 import { client } from "./client";
 
 export async function services() {
@@ -10,6 +10,7 @@ export async function services() {
             client.startService({
                 workflowsPath,
                 functions: {
+
                     // add other functions here
                 },
             }),
@@ -17,7 +18,7 @@ export async function services() {
             // https://docs.together.ai/docs/rate-limits
             client.startService({
                 taskQueue: 'together',
-                functions: { togetherChatCompletionBasic },
+                functions: { togetherChatCompletionBasic, llamaIndexQueryTogether },
                 options: {
                     rateLimit: (60 / 60), // 60 RPM -> 1 RPS 
                 },
