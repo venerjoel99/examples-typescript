@@ -1,5 +1,5 @@
 // Simple example to start two services in the same file
-import { togetherChatCompletionBasic, getCurrentTime } from "./functions";
+import { togetherChatCompletionBasic } from "./functions";
 import { client } from "./client";
 
 export async function services() {
@@ -10,7 +10,6 @@ export async function services() {
             client.startService({
                 workflowsPath,
                 functions: {
-                    getCurrentTime,
                     // add other functions here
                 },
             }),
