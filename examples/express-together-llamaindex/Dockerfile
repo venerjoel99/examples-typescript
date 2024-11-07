@@ -1,10 +1,13 @@
 # Build stage
-FROM node:20-bullseye-slim AS builder
+FROM node:20-bullseye AS builder
 
 WORKDIR /app
 
 # Install pnpm
 RUN npm install -g pnpm
+
+# Copy package files and env file if it exists
+COPY package*.json .env* ./
 
 # Copy package files
 COPY package*.json ./
@@ -20,7 +23,7 @@ COPY . .
 RUN pnpm run build
 
 # Production stage
-FROM node:20-bullseye-slim
+FROM node:20-bullseye
 
 WORKDIR /app
 
@@ -36,4 +39,4 @@ RUN pnpm install --prod
 
 EXPOSE 8000
 
-CMD ["node", "dist/server.js"]
+CMD ["pnpm", "tsx", "dist/server.js"]
