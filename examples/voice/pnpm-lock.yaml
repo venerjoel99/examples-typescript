@@ -12,20 +12,20 @@ importers:
         specifier: ^3.6.0
         version: 3.8.0(bufferutil@4.0.8)(encoding@0.1.12)
       '@restackio/ai':
-        specifier: ^0.0.80
-        version: 0.0.80
+        specifier: ^0.0.81
+        version: 0.0.81
       '@restackio/integrations-deepgram':
-        specifier: ^0.0.11
-        version: 0.0.11(bufferutil@4.0.8)(encoding@0.1.12)
+        specifier: ^0.0.12
+        version: 0.0.12(bufferutil@4.0.8)(encoding@0.1.12)
       '@restackio/integrations-openai':
-        specifier: ^0.0.29
-        version: 0.0.29(encoding@0.1.12)(zod@3.23.8)
+        specifier: ^0.0.33
+        version: 0.0.33(encoding@0.1.12)(zod@3.23.8)
       '@restackio/integrations-twilio':
-        specifier: ^0.0.8
-        version: 0.0.8
+        specifier: ^0.0.9
+        version: 0.0.9
       '@restackio/integrations-websocket':
-        specifier: ^0.0.15
-        version: 0.0.15(bufferutil@4.0.8)
+        specifier: ^0.0.16
+        version: 0.0.16(bufferutil@4.0.8)
       '@temporalio/workflow':
         specifier: 1.11.1
         version: 1.11.1
@@ -193,21 +193,21 @@ packages:
   '@protobufjs/utf8@1.1.0':
     resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
 
-  '@restackio/ai@0.0.80':
-    resolution: {integrity: sha512-igmdZOTPm70lB7QWTrp7hg1M/btsTIlWUqvZbPD9bbECCrVjsyOxlvqmZuL7fxkKfa2OR0H4P9TO5VLyEwCztQ==}
+  '@restackio/ai@0.0.81':
+    resolution: {integrity: sha512-SEu3Ky7C3B5Glr20q88oCBORHKKJ9nKhxPKmv/riCKqSteG48T+urdY1ym7gbBtZ6iNaQonvsyO8oJax/udPSA==}
     engines: {node: '>=20'}
 
-  '@restackio/integrations-deepgram@0.0.11':
-    resolution: {integrity: sha512-7qqmIo5EjYRB2bXRygOz/DI926+4ar3h9831T+pSRD38SWTlpvwiNThnBEIBKb4vuxB96ulDsQznQTvmzMNVFA==}
+  '@restackio/integrations-deepgram@0.0.12':
+    resolution: {integrity: sha512-wm6zYPwQRYA4bfohDl6RQgQZqHUuD2/B4OS64YXz/WUD3ycLMzns6nTgvsCbGyzAAsa27N4jajr4G4DQOsSDAQ==}
 
-  '@restackio/integrations-openai@0.0.29':
-    resolution: {integrity: sha512-pZmU9aeLW/yno2jtReSYyC+20tHCEmpInkwtYG3LZpmwWgyiUmz2hjxlnZ2H1r5WQQWL9xUvV2TOrk3dCKfg0A==}
+  '@restackio/integrations-openai@0.0.33':
+    resolution: {integrity: sha512-nolL3Q0ww127iibCeSyuHEzapNHcm68aqoWrIt2grouQwftg+82hS4a9ukq7AtNKO/q4u+IqXq6GWU9ztdjdSQ==}
 
-  '@restackio/integrations-twilio@0.0.8':
-    resolution: {integrity: sha512-7On5khfVd7w7q2OFQCp3XBNkw8wll/rcHGnrpXwcBII+dacnuKp4l9x8qxTCTaOkmGsXJcvq3c3x8jZHaXB7yA==}
+  '@restackio/integrations-twilio@0.0.9':
+    resolution: {integrity: sha512-HI1PIFMYOCu0HqZC92Njuh3mLQJb+kYUYI82kJGKZMzAjJvE8x8TuFfXsHDbddRFIbLoxt/aYt1uyvCXGPlu7Q==}
 
-  '@restackio/integrations-websocket@0.0.15':
-    resolution: {integrity: sha512-RjJhGn9ej45mfR1mqeZyCOZKR8N5fImQvkLfbfSlaIl1IbWN2pY0dkXV/0urEHbX12dAunQhsGvlalRDsma1Cg==}
+  '@restackio/integrations-websocket@0.0.16':
+    resolution: {integrity: sha512-eJ7XyTWAy+ilhnLEXxse6Heg62Ev0HBcVGyEklj4xj87bN9+vQl3XOQ9eQuLzZynrLDy7tR5tT/K5XCsRLISVw==}
 
   '@restackio/restack-sdk-cloud-ts@1.0.16':
     resolution: {integrity: sha512-oIanzD6ym6c+hZ6eMJozTaIxGmMn1hPZRwogzz4v2hdd40IpdbwuHc98bPrHjswS1rZa+vjPjLbKoSuLlZloOQ==}
@@ -1656,7 +1656,7 @@ snapshots:
 
   '@protobufjs/utf8@1.1.0': {}
 
-  '@restackio/ai@0.0.80':
+  '@restackio/ai@0.0.81':
     dependencies:
       '@temporalio/activity': 1.11.2
       '@temporalio/client': 1.11.2
@@ -1668,7 +1668,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@restackio/integrations-deepgram@0.0.11(bufferutil@4.0.8)(encoding@0.1.12)':
+  '@restackio/integrations-deepgram@0.0.12(bufferutil@4.0.8)(encoding@0.1.12)':
     dependencies:
       '@deepgram/sdk': 3.8.0(bufferutil@4.0.8)(encoding@0.1.12)
     transitivePeerDependencies:
@@ -1676,21 +1676,21 @@ snapshots:
       - encoding
       - utf-8-validate
 
-  '@restackio/integrations-openai@0.0.29(encoding@0.1.12)(zod@3.23.8)':
+  '@restackio/integrations-openai@0.0.33(encoding@0.1.12)(zod@3.23.8)':
     dependencies:
       openai: 4.67.1(encoding@0.1.12)(zod@3.23.8)
     transitivePeerDependencies:
       - encoding
       - zod
 
-  '@restackio/integrations-twilio@0.0.8':
+  '@restackio/integrations-twilio@0.0.9':
     dependencies:
       twilio: 5.3.3
     transitivePeerDependencies:
       - debug
       - supports-color
 
-  '@restackio/integrations-websocket@0.0.15(bufferutil@4.0.8)':
+  '@restackio/integrations-websocket@0.0.16(bufferutil@4.0.8)':
     dependencies:
       ws: 8.18.0(bufferutil@4.0.8)
     transitivePeerDependencies:

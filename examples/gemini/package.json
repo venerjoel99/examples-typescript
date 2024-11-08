@@ -21,8 +21,8 @@
     ]
   },
   "dependencies": {
-    "@restackio/ai": "^0.0.80",
-    "@restackio/integrations-google-gemini": "^0.0.1",
+    "@restackio/ai": "^0.0.81",
+    "@restackio/integrations-google-gemini": "^0.0.2",
     "@temporalio/workflow": "^1.11.2",
     "dotenv": "^16.4.5"
   },

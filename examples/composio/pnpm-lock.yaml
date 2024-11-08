@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@restackio/ai':
-        specifier: ^0.0.80
-        version: 0.0.80
+        specifier: ^0.0.81
+        version: 0.0.81
       '@restackio/integrations-composio':
-        specifier: ^0.0.4
-        version: 0.0.4(@swc/core@1.7.26)(@types/node@20.16.10)(bufferutil@4.0.8)(react@18.3.1)(sswr@2.1.0(svelte@5.1.4))(svelte@5.1.4)(typescript@5.6.3)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.6.3))(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.23.8)
+        specifier: ^0.0.5
+        version: 0.0.5(@swc/core@1.7.26)(@types/node@20.16.10)(bufferutil@4.0.8)(react@18.3.1)(sswr@2.1.0(svelte@5.1.4))(svelte@5.1.4)(typescript@5.6.3)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.6.3))(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.23.8)
       '@temporalio/workflow':
         specifier: ^1.11.2
         version: 1.11.2
@@ -386,16 +386,16 @@ packages:
     resolution: {integrity: sha512-IlfnMo8c6qHBRag2K6OnUwP6OflQYuzDk1XlocpvnbwPwDnni8Zgzz1f4xRJvcfxpJETKIHCscWXSGMjVLNfvg==}
     engines: {node: '>=20'}
 
-  '@restackio/ai@0.0.80':
-    resolution: {integrity: sha512-igmdZOTPm70lB7QWTrp7hg1M/btsTIlWUqvZbPD9bbECCrVjsyOxlvqmZuL7fxkKfa2OR0H4P9TO5VLyEwCztQ==}
+  '@restackio/ai@0.0.81':
+    resolution: {integrity: sha512-SEu3Ky7C3B5Glr20q88oCBORHKKJ9nKhxPKmv/riCKqSteG48T+urdY1ym7gbBtZ6iNaQonvsyO8oJax/udPSA==}
     engines: {node: '>=20'}
 
   '@restackio/cloud@1.0.17':
     resolution: {integrity: sha512-OpKav5QYbesnigQuTwmIke0pKnw4ZwdWAeJNOrEWN5r/DFPiSUoYrZJ+XggiPxTSI0gb6JX/35k9U+LF5bQAoQ==}
     engines: {node: '>=18'}
 
-  '@restackio/integrations-composio@0.0.4':
-    resolution: {integrity: sha512-0jjpi7aLBylan1hq1HqRS690aCKiN1vf8Iy/42sq3dugHsj1GdcuzDfLVLZ8+xwetxrfp/h48y89IKR5lo0l6Q==}
+  '@restackio/integrations-composio@0.0.5':
+    resolution: {integrity: sha512-Gwe3Y0+V/f3V1Z0nkRRPoO7aI4BKzEIL+1qDkLgKSW5/Guji1JeDL06vjChALxTDIui8J7nFGDeDzNbT4kAEWQ==}
 
   '@restackio/integrations-openai@0.0.32':
     resolution: {integrity: sha512-nGPCCqm4xzlmzCtMcr+kvks5WkexPb8z+dGP7Eom10ELZXVeGLzdmEEBS8V2DUpkTJPP7Zfqufb2LVHfkTuXzA==}
@@ -2603,7 +2603,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@restackio/ai@0.0.80':
+  '@restackio/ai@0.0.81':
     dependencies:
       '@temporalio/activity': 1.11.2
       '@temporalio/client': 1.11.2
@@ -2626,7 +2626,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@restackio/integrations-composio@0.0.4(@swc/core@1.7.26)(@types/node@20.16.10)(bufferutil@4.0.8)(react@18.3.1)(sswr@2.1.0(svelte@5.1.4))(svelte@5.1.4)(typescript@5.6.3)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.6.3))(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.23.8)':
+  '@restackio/integrations-composio@0.0.5(@swc/core@1.7.26)(@types/node@20.16.10)(bufferutil@4.0.8)(react@18.3.1)(sswr@2.1.0(svelte@5.1.4))(svelte@5.1.4)(typescript@5.6.3)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.6.3))(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))(zod@3.23.8)':
     dependencies:
       '@restackio/integrations-openai': 0.0.32(zod@3.23.8)
       composio-core: 0.2.7(@swc/core@1.7.26)(@types/node@20.16.10)(bufferutil@4.0.8)(react@18.3.1)(sswr@2.1.0(svelte@5.1.4))(svelte@5.1.4)(typescript@5.6.3)(utf-8-validate@6.0.4)(vue@3.5.12(typescript@5.6.3))(ws@8.18.0(bufferutil@4.0.8)(utf-8-validate@6.0.4))
