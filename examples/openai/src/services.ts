@@ -13,7 +13,6 @@ async function services() {
       // Start the openai service
       client.startService({
         taskQueue: "openai",
-        workflowsPath,
         functions: { openaiChatCompletionsBase, openaiChatCompletionsStream },
       }),
     ]);
