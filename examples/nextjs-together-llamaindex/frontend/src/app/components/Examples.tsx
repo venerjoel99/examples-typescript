@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Example, examples } from "./examplesList";
-import { triggerWorkflow } from "@/app/actions/trigger";
+import { scheduleWorkflow } from "@/app/actions/schedule";
 
 const Examples = () => {
   const [loading, setLoading] = useState(false);
@@ -12,11 +12,11 @@ const Examples = () => {
     setLoading(true);
     setOutput({});
     try {
-      const result = await triggerWorkflow(example.workflowName, example.input);
+      const result = await scheduleWorkflow(example.workflowName, example.input);
       setOutput(result);
     } catch (error) {
-      console.error("Error triggering workflow:", error);
-      setOutput("Error triggering workflow");
+      console.error("Error scheduling workflow:", error);
+      setOutput("Error scheduling workflow");
     } finally {
       setLoading(false);
     }
@@ -33,7 +33,7 @@ const Examples = () => {
             onClick={() => handleButtonClick(example)}
             disabled={loading}
           >
-            {loading ? "Triggering..." : "Trigger Workflow"}
+            {loading ? "Scheduling..." : "Schedule Workflow"}
           </button>
         </div>
       ))}

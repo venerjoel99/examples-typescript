@@ -12,7 +12,7 @@ const client = new Restack(
   process.env.RESTACK_ENGINE_API_KEY ? connectionOptions : undefined
 );
 
-export async function triggerWorkflow(
+export async function scheduleWorkflow(
   workflowName: Example["workflowName"],
   input: Example["input"]
 ) {
