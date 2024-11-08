@@ -71,7 +71,3 @@ The web-based dashboard lets you:
 - Test and validate individual functions
 - Create and manage workflow schedules
 - Access complete execution logs and history
-
-```
-
-```
