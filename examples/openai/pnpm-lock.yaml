@@ -11,15 +11,15 @@ importers:
       '@restackio/ai':
         specifier: ^0.0.81
         version: 0.0.81
-      '@restackio/integrations-openai':
-        specifier: ^0.0.33
-        version: 0.0.33(zod@3.23.8)
       '@temporalio/workflow':
         specifier: ^1.11.2
         version: 1.11.2
       dotenv:
         specifier: ^16.4.5
         version: 16.4.5
+      openai:
+        specifier: ^4.71.1
+        version: 4.71.1(zod@3.23.8)
       zod:
         specifier: ^3.23.8
         version: 3.23.8
@@ -181,9 +181,6 @@ packages:
   '@restackio/ai@0.0.81':
     resolution: {integrity: sha512-SEu3Ky7C3B5Glr20q88oCBORHKKJ9nKhxPKmv/riCKqSteG48T+urdY1ym7gbBtZ6iNaQonvsyO8oJax/udPSA==}
     engines: {node: '>=20'}
-
-  '@restackio/integrations-openai@0.0.33':
-    resolution: {integrity: sha512-nolL3Q0ww127iibCeSyuHEzapNHcm68aqoWrIt2grouQwftg+82hS4a9ukq7AtNKO/q4u+IqXq6GWU9ztdjdSQ==}
 
   '@restackio/restack-sdk-cloud-ts@1.0.16':
     resolution: {integrity: sha512-oIanzD6ym6c+hZ6eMJozTaIxGmMn1hPZRwogzz4v2hdd40IpdbwuHc98bPrHjswS1rZa+vjPjLbKoSuLlZloOQ==}
@@ -881,8 +878,8 @@ packages:
       zod:
         optional: true
 
-  openai@4.67.1:
-    resolution: {integrity: sha512-2YbRFy6qaYRJabK2zLMn4txrB2xBy0KP5g/eoqeSPTT31mIJMnkT75toagvfE555IKa2RdrzJrZwdDsUipsAMw==}
+  openai@4.71.1:
+    resolution: {integrity: sha512-C6JNMaQ1eijM0lrjiRUL3MgThVP5RdwNAghpbJFdW0t11LzmyqON8Eh8MuUuEZ+CeD6bgYl2Fkn2BoptVxv9Ug==}
     hasBin: true
     peerDependencies:
       zod: ^3.23.8
@@ -1332,13 +1329,6 @@ snapshots:
       - esbuild
       - uglify-js
       - webpack-cli
-
-  '@restackio/integrations-openai@0.0.33(zod@3.23.8)':
-    dependencies:
-      openai: 4.67.1(zod@3.23.8)
-    transitivePeerDependencies:
-      - encoding
-      - zod
 
   '@restackio/restack-sdk-cloud-ts@1.0.16':
     dependencies:
@@ -2050,7 +2040,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  openai@4.67.1(zod@3.23.8):
+  openai@4.71.1(zod@3.23.8):
     dependencies:
       '@types/node': 18.19.54
       '@types/node-fetch': 2.6.11

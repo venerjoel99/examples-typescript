@@ -1,4 +1,4 @@
-import { goodbye } from "./functions";
+import { goodbye, openaiChatCompletionsBase, openaiChatCompletionsStream } from "./functions";
 import { client } from "./client";
 
 async function services() {
@@ -11,7 +11,11 @@ async function services() {
         functions: { goodbye },
       }),
       // Start the openai service
-      openaiService({ client }),
+      client.startService({
+        taskQueue: "openai",
+        workflowsPath,
+        functions: { openaiChatCompletionsBase, openaiChatCompletionsStream },
+      }),
     ]);
 
     console.log("Services running successfully.");
