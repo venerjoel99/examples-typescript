@@ -23,21 +23,24 @@ The Restack Web UI will be available at http://localhost:5233
 ### Autonomous AI Examples
 
 - [examples/posthog](examples/posthog) - Analyzes PostHog session recordings and creates Linear digests
-
+- [examples/voice](examples/voice) - Voice processing with Deepgram and OpenAI
 
 [Find more autonomous examples](https://docs.restack.io/examples)
 
-### AI Integration Examples
+### Examples with Service Provider (OpenAI, Gemini & more)
 
 - [examples/openai](examples/openai) - Basic OpenAI integration example
 - [examples/gemini](examples/gemini) - Example using Google's Gemini model
-- [examples/voice](examples/voice) - Voice processing with Deepgram and OpenAI
 - [examples/composio](examples/composio) - Calendar event creation with AI
+- [examples/expresss-together-llamaindex](examples/express-together-llamaindex) - Together AI and LlamaIndex integration with Express
+- [examples/nextjs-together-llamaindex](examples/nextjs-together-llamaindex) - Together AI and LlamaIndex integration with Next.js
 
 ### Framework Examples
 
 - [examples/get-started](examples/get-started) - Basic starter template
 - [examples/nextjs](examples/nextjs) - Integration with Next.js applications
+- [examples/express](examples/express) - Basic Express server to schedule restack workflows 
+- [examples/swagger](examples/swagger) - Express server with Swagger documentation to trigger restack workflow from Swagger UI
 - [examples/human-loop](examples/human-loop) - Example of human-in-the-loop workflows
 
 ## Documentation
@@ -55,7 +58,7 @@ The Restack Engine uses Temporal to reliably run and manage AI workflows. It han
 - Long-running workflows that maintain state for days or months
 - Detailed workflow replay and debugging
 - Automated event processing and handling
-- Scheduled and recurring job execution 
+- Scheduled and recurring job execution
 - Smart API rate limiting
 - Persistent memory and state management
 
@@ -68,3 +71,7 @@ The web-based dashboard lets you:
 - Test and validate individual functions
 - Create and manage workflow schedules
 - Access complete execution logs and history
+
+```
+
+```
