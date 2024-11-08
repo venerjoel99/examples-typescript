@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@restackio/ai':
-        specifier: 0.0.80
-        version: 0.0.80
+        specifier: 0.0.81
+        version: 0.0.81
       '@restackio/integrations-openai':
-        specifier: 0.0.29
-        version: 0.0.29(zod@3.23.8)
+        specifier: 0.0.33
+        version: 0.0.33(zod@3.23.8)
       '@temporalio/workflow':
         specifier: 1.11.2
         version: 1.11.2
@@ -325,16 +325,16 @@ packages:
     resolution: {integrity: sha512-IlfnMo8c6qHBRag2K6OnUwP6OflQYuzDk1XlocpvnbwPwDnni8Zgzz1f4xRJvcfxpJETKIHCscWXSGMjVLNfvg==}
     engines: {node: '>=20'}
 
-  '@restackio/ai@0.0.80':
-    resolution: {integrity: sha512-igmdZOTPm70lB7QWTrp7hg1M/btsTIlWUqvZbPD9bbECCrVjsyOxlvqmZuL7fxkKfa2OR0H4P9TO5VLyEwCztQ==}
+  '@restackio/ai@0.0.81':
+    resolution: {integrity: sha512-SEu3Ky7C3B5Glr20q88oCBORHKKJ9nKhxPKmv/riCKqSteG48T+urdY1ym7gbBtZ6iNaQonvsyO8oJax/udPSA==}
     engines: {node: '>=20'}
 
   '@restackio/cloud@1.0.17':
     resolution: {integrity: sha512-OpKav5QYbesnigQuTwmIke0pKnw4ZwdWAeJNOrEWN5r/DFPiSUoYrZJ+XggiPxTSI0gb6JX/35k9U+LF5bQAoQ==}
     engines: {node: '>=18'}
 
-  '@restackio/integrations-openai@0.0.29':
-    resolution: {integrity: sha512-pZmU9aeLW/yno2jtReSYyC+20tHCEmpInkwtYG3LZpmwWgyiUmz2hjxlnZ2H1r5WQQWL9xUvV2TOrk3dCKfg0A==}
+  '@restackio/integrations-openai@0.0.33':
+    resolution: {integrity: sha512-nolL3Q0ww127iibCeSyuHEzapNHcm68aqoWrIt2grouQwftg+82hS4a9ukq7AtNKO/q4u+IqXq6GWU9ztdjdSQ==}
 
   '@swc/core-darwin-arm64@1.7.2':
     resolution: {integrity: sha512-Zb8KiGaESzOgh5HBnp6Vhs2fRpngHIT81JOfIo0oaGlzAckamnG7UAXC/yK6cQ8q2KXc78utJ/yq/NM2yVKLqw==}
@@ -1443,7 +1443,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@restackio/ai@0.0.80':
+  '@restackio/ai@0.0.81':
     dependencies:
       '@temporalio/activity': 1.11.2
       '@temporalio/client': 1.11.2
@@ -1466,7 +1466,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@restackio/integrations-openai@0.0.29(zod@3.23.8)':
+  '@restackio/integrations-openai@0.0.33(zod@3.23.8)':
     dependencies:
       openai: 4.67.1(zod@3.23.8)
     transitivePeerDependencies:

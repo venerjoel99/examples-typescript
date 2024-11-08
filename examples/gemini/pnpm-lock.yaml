@@ -9,11 +9,11 @@ importers:
   .:
     dependencies:
       '@restackio/ai':
-        specifier: ^0.0.80
-        version: 0.0.80
+        specifier: ^0.0.81
+        version: 0.0.81
       '@restackio/integrations-google-gemini':
-        specifier: ^0.0.1
-        version: 0.0.1
+        specifier: ^0.0.2
+        version: 0.0.2
       '@temporalio/workflow':
         specifier: ^1.11.2
         version: 1.11.2
@@ -179,16 +179,16 @@ packages:
     resolution: {integrity: sha512-IlfnMo8c6qHBRag2K6OnUwP6OflQYuzDk1XlocpvnbwPwDnni8Zgzz1f4xRJvcfxpJETKIHCscWXSGMjVLNfvg==}
     engines: {node: '>=20'}
 
-  '@restackio/ai@0.0.80':
-    resolution: {integrity: sha512-igmdZOTPm70lB7QWTrp7hg1M/btsTIlWUqvZbPD9bbECCrVjsyOxlvqmZuL7fxkKfa2OR0H4P9TO5VLyEwCztQ==}
+  '@restackio/ai@0.0.81':
+    resolution: {integrity: sha512-SEu3Ky7C3B5Glr20q88oCBORHKKJ9nKhxPKmv/riCKqSteG48T+urdY1ym7gbBtZ6iNaQonvsyO8oJax/udPSA==}
     engines: {node: '>=20'}
 
   '@restackio/cloud@1.0.17':
     resolution: {integrity: sha512-OpKav5QYbesnigQuTwmIke0pKnw4ZwdWAeJNOrEWN5r/DFPiSUoYrZJ+XggiPxTSI0gb6JX/35k9U+LF5bQAoQ==}
     engines: {node: '>=18'}
 
-  '@restackio/integrations-google-gemini@0.0.1':
-    resolution: {integrity: sha512-ALL3CExYAO/yC6OVWulssEZj1XV5JuN/Gsx8dzv2DPuUkM8OiKCI5+LxtlP5hhfUKrlBdYk+020vwhyXT3+jGA==}
+  '@restackio/integrations-google-gemini@0.0.2':
+    resolution: {integrity: sha512-3EIpk1m3X+oelaT9ZdnrE+WG0asSDIa8dOoICyS+pZxr41DplT4SlJVvzM3NFnK38eIyRS0mFn6o7MX5fRrI2A==}
 
   '@swc/core-darwin-arm64@1.7.2':
     resolution: {integrity: sha512-Zb8KiGaESzOgh5HBnp6Vhs2fRpngHIT81JOfIo0oaGlzAckamnG7UAXC/yK6cQ8q2KXc78utJ/yq/NM2yVKLqw==}
@@ -1307,7 +1307,7 @@ snapshots:
       - uglify-js
       - webpack-cli
 
-  '@restackio/ai@0.0.80':
+  '@restackio/ai@0.0.81':
     dependencies:
       '@temporalio/activity': 1.11.2
       '@temporalio/client': 1.11.2
@@ -1330,7 +1330,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@restackio/integrations-google-gemini@0.0.1':
+  '@restackio/integrations-google-gemini@0.0.2':
     dependencies:
       '@google/generative-ai': 0.21.0
 

@@ -15,9 +15,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@restackio/integrations-linear": "^0.0.6",
-    "@restackio/integrations-openai": "^0.0.29",
-    "@restackio/ai": "^0.0.80",
+    "@restackio/integrations-linear": "^0.0.7",
+    "@restackio/integrations-openai": "^0.0.33",
+    "@restackio/ai": "^0.0.81",
     "@temporalio/workflow": "1.11.1",
     "dotenv": "^16.4.5",
     "typescript": "^5.6.2",
