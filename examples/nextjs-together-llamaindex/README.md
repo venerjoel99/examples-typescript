@@ -42,6 +42,8 @@ npm install
 
 ```
 TOGETHER_API_KEY=your_together_api_key
+
+# Optional:
 RESTACK_ENGINE_ID=your_engine_id
 RESTACK_ENGINE_ADDRESS=your_engine_address
 RESTACK_ENGINE_API_KEY=your_engine_api_key
@@ -67,9 +69,10 @@ cd frontend
 npm install
 ```
 
-3. Create a `.env` file:
+3. (Optional) Create a `.env` file:
 
 ```
+# Optional:
 RESTACK_ENGINE_ID=your_engine_id
 RESTACK_ENGINE_ADDRESS=your_engine_address
 RESTACK_ENGINE_API_KEY=your_engine_api_key
