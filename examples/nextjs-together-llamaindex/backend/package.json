@@ -10,15 +10,6 @@
     "docker:run": "docker run -p 8000:8000 --network restack-net --env-file .env --env RESTACK_ENGINE_ADDRESS=http://localhost:6233 restack-express-together-llamaindex",
     "docker:dev": "pnpm docker:build && pnpm docker:run"
   },
-  "nodemonConfig": {
-    "execMap": {
-      "ts": "ts-node"
-    },
-    "ext": "ts",
-    "watch": [
-      "src"
-    ]
-  },
   "dependencies": {
     "@restackio/ai": "^0.0.81",
     "@temporalio/workflow": "^1.11.2",

@@ -123,7 +123,7 @@ For detailed deployment information, see the [Restack Cloud documentation](https
 
 ### Frontend
 
-- Modern Next.js 14 application
+- Next.js 14 application
 - Server Actions for workflow triggering
 - Tailwind CSS for styling
 - Type-safe API integration
