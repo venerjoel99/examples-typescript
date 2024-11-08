@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { Example, examples } from "./examplesList";
-import { triggerWorkflow } from "@/app/actions/Trigger";
+import { triggerWorkflow } from "@/app/actions/trigger";
 
 const Examples = () => {
   const [loading, setLoading] = useState(false);

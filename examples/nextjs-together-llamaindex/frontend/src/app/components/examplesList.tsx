@@ -3,7 +3,7 @@ export type Example = {
   description: string;
   integrations: string[];
   workflowName: string;
-  input: Record<string, any>;
+  input: Record<string, unknown>;
 };
 
 export const examples = [

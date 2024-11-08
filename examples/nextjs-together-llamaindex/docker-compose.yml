@@ -1,4 +1,8 @@
+name: nextjs-together-llamaindex
 version: '3.8'
+networks:
+  bridge:
+    driver: bridge
 
 services:
   frontend:
@@ -15,6 +19,8 @@ services:
       - NEXT_PUBLIC_API_HOSTNAME=http://backend:3000
     depends_on:
       - backend
+    networks:
+      - bridge
 
   backend:
     build:
@@ -24,3 +30,5 @@ services:
       - "8000:3000"
     env_file:
       - ./backend/.env
+    networks:
+      - bridge
