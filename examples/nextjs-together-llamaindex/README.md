@@ -1,49 +1,152 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Next.js with Together AI and LlamaIndex Integration
+
+This project demonstrates how to build a Next.js application that integrates Together AI and LlamaIndex for AI-powered functionalities. The project consists of a frontend built with Next.js and a backend service handling AI operations.
+
+## Project Structure
+
+- `frontend/`: Next.js frontend application
+- `backend/`: Node.js backend service with Together AI and LlamaIndex integration
+
+## Prerequisites
+
+- Node.js (LTS version)
+- Docker
+- Together AI API key
+- Restack Engine setup
 
 ## Getting Started
 
-First, run the development server:
+### 1. Install Restack Web UI
+
+First, install the Restack Web UI using Docker:
+
+```bash
+docker run -d --pull always --name studio -p 5233:5233 -p 6233:6233 -p 7233:7233 ghcr.io/restackio/restack:main
+```
+
+### 2. Set Up Backend
+
+1. Navigate to the backend directory:
+
+```bash
+cd backend
+```
+
+2. Install dependencies:
+
+```bash
+npm install
+```
+
+3. Create a `.env` file with your credentials:
+
+```
+TOGETHER_API_KEY=your_together_api_key
+RESTACK_ENGINE_ID=your_engine_id
+RESTACK_ENGINE_ADDRESS=your_engine_address
+RESTACK_ENGINE_API_KEY=your_engine_api_key
+```
+
+4. Start the backend service:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 3. Set Up Frontend
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Navigate to the frontend directory:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-# Install Restack Web UI 
-
-To install the Restack Web UI, you can use Docker.
+```bash
+cd frontend
 ```
-docker run -d --pull always --name studio -p 5233:5233 -p 6233:6233 -p 7233:7233 ghcr.io/restackio/restack:main
+
+2. Install dependencies:
+
+```bash
+npm install
 ```
-# Schedule Restack workflow from NextJS frontend
 
-The example is a NextJS application with front and backend. You can schedule the workflow example from the user interface. 
+3. Create a `.env` file:
 
-![Example UI](./restack-examples-ts-nextjs.png)
+```
+RESTACK_ENGINE_ID=your_engine_id
+RESTACK_ENGINE_ADDRESS=your_engine_address
+RESTACK_ENGINE_API_KEY=your_engine_api_key
+```
 
-When the client successfully schedules the workflow, you can see the started workflow in the Restack Web UI. You should see the following screen:
+4. Start the development server:
 
-![Success Web UI](./restack-examples-ts-nextjs-web-ui.png)
+```bash
+npm run dev
+```
 
-Now you can add a backend to the example. In other examples, you can see how to ideally structure the backend app with workflows, functions and services.
+Visit [http://localhost:3000](http://localhost:3000) to see the application.
+
+## Available Features
+
+1. **Chat Completion Example**: Demonstrates basic chat completion using Together AI's Llama models
+2. **LlamaIndex Integration**: Shows how to query models using LlamaIndex with Together AI integration
+
+## Docker Deployment
+
+You can deploy both frontend and backend using Docker Compose:
+
+```bash
+docker-compose up -d
+```
+
+This will:
+
+- Build and start the frontend on port 3000
+- Build and start the backend on port 8000
+- Set up proper networking between services
 
 ## Deploy on Restack
 
-To deploy this Next.js application on Restack, you can use the provided `restack_up.mjs` script. This script utilizes the Restack Cloud SDK to define and deploy your application stack. It sets up the necessary environment variables and configures the Next.js application for deployment. 
+To deploy this application on Restack:
 
-To get started, ensure you have the required Restack Cloud credentials and environment variables set up. Then, run the script to initiate the deployment process. 
+1. Ensure you have Restack Cloud credentials
+2. Set up required environment variables
+3. Run the deployment script:
 
-For more detailed information on deploying your repository to Restack, refer to the [Restack Cloud deployment documentation](https://docs.restack.io/restack-cloud/deployrepo).
+```bash
+node restack_up.mjs
+```
 
+For detailed deployment information, see the [Restack Cloud documentation](https://docs.restack.io/restack-cloud/deployrepo).
 
+## Project Components
+
+### Frontend
+
+- Modern Next.js 14 application
+- Server Actions for workflow triggering
+- Tailwind CSS for styling
+- Type-safe API integration
+
+### Backend
+
+- Node.js backend service
+- Together AI integration for LLM operations
+- LlamaIndex for enhanced AI capabilities
+- Rate-limited API calls (60 RPM)
+
+## Example Workflows
+
+The application includes two main workflows:
+
+1. **Chat Completion Basic**: Generates greeting and farewell messages using Together AI models
+2. **LlamaIndex Together Simple**: Demonstrates LlamaIndex integration with Together AI for complex queries
+
+## Screenshots
+
+![Example UI](./restack-examples-ts-nextjs.png)
+_Main application interface_
+
+![Success Web UI](./restack-examples-ts-nextjs-web-ui.png)
+_Restack Web UI showing workflow execution_
+
+## Contributing
+
+Feel free to submit issues and enhancement requests.
