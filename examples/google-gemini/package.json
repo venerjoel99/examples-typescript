@@ -1,5 +1,5 @@
 {
-  "name": "sdk-gemini-example-ts",
+  "name": "restack-examples-ts-google-gemini",
   "version": "1.0.0",
   "description": "Basic Gemini example",
   "scripts": {
@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@restackio/ai": "^0.0.82",
-    "@restackio/integrations-google-gemini": "^0.0.3",
+    "@google/generative-ai": "^0.21.0",
     "@temporalio/workflow": "^1.11.2",
     "dotenv": "^16.4.5"
   },
