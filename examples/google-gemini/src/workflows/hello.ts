@@ -1,5 +1,5 @@
 import { log, step } from "@restackio/ai/workflow";
-import * as functions from "../functions/index.js";
+import * as functions from "../functions";
 
 interface Input {
   name: string;

@@ -1,2 +1,2 @@
-export * from "./gemini";
+export * from "./google-gemini";
 export * from "./goodbye";
