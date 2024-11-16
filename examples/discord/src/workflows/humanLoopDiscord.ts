@@ -12,7 +12,7 @@ export async function humanLoopDiscordWorkflow(input: Input) {
 
   
   const promptResponse = await step<typeof functions>({}).postMessageToChannel({
-    messageText: `Message ${botTag} for backwards messages. Message "${botTag} STOP" to end the loop`,
+    messageText: `Message this channel and tag ${botTag} for backwards messages. Message "${botTag} STOP" to end the loop`,
     channelId: input.channelId,
   });
   let previousMessageId = promptResponse.id;

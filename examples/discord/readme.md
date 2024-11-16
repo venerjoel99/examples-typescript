@@ -1,12 +1,12 @@
-# Restack AI - Human in the loop example
+# Restack AI - Discord Human in the loop example
 
-This example will illustrate how you can handle events that will receive feedback as input and have a function that will acknowledge the feedback was received.
-It will also showcase how a workflow can be left running indefinitely until a condition is met by the usage of the `condition`.
+This example will illustrate how you can utilize the Discord API and the Discord bot to get new messages from a channel and reply accordingly
 
-Idea is the humanLoop workflow will have two events:
+The idea is the loop workflow will do the following:
 
-1. feedback. This event will be triggered whenever you want to send feedback to your desired AI. For simplicity purposes, the function called on this event will just reply with a message that the feedback was received.
-2. end. This event will be triggered when you are done with interactions and you want your workflow to be done and exit. Right now it sets the `endWorkflow` local variable on the workflow to true, which will make the `condition` set to resolve successfully and exit the workflow. You can use this example as guidance on how you can keep a workflow running until the end event is sent and how it will handle the events you have defined for the time it is running.
+1. Read new messages with the bot tagged after the last messages the bot sent.
+2. Reverse a message and reply with the backwards message on the channel.
+3. If a 'STOP' message is detected with the bot tagged, the loop will end.
 
 # Requirements
 
@@ -15,9 +15,9 @@ Idea is the humanLoop workflow will have two events:
 brew install nvm
 nvm use 20
 
-- pnpm
+- npm
 
-brew install pnpm
+brew install npm
 
 # Install Restack Web UI
 
@@ -29,11 +29,10 @@ docker run -d --pull always --name studio -p 5233:5233 -p 6233:6233 -p 7233:7233
 
 # Start services
 
-Where all your code is defined, including workflow steps.
+Go to this directory and run
 
 ```bash
-pnpm i
-pnpm dev
+DISCORD_BOT_TOKEN=<your-bot-token> npm run service
 ```
 
 Your code will be running and syncing with Restack engine to execute workflows or functions.
@@ -43,7 +42,7 @@ Your code will be running and syncing with Restack engine to execute workflows o
 In another shell run following command:
 
 ```bash
-pnpm schedule
+DISCORD_BOT_ID=<your-bot-id> DISCORD_CHANNEL_ID=<your-channel-id> npm run schedule
 ```
 
 Will schedule to start example workflow immediately. This runs the `scheduleWorkflow` file.
