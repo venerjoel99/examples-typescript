@@ -42,7 +42,7 @@ Your code will be running and syncing with Restack engine to execute workflows o
 In another shell run following command:
 
 ```bash
-DISCORD_BOT_ID=<your-bot-id> DISCORD_CHANNEL_ID=<your-channel-id> npm run schedule
+DISCORD_BOT_TOKEN=<your-bot-token> DISCORD_BOT_ID=<your-bot-id> DISCORD_CHANNEL_ID=<your-channel-id> npm run schedule
 ```
 
 Will schedule to start example workflow immediately. This runs the `scheduleWorkflow` file.
