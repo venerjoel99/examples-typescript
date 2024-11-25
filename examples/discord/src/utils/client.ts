@@ -1,5 +1,7 @@
 const DISCORD_API_VERSION = '10';
 const DISCORD_BASE_URL = `https://discord.com/api/v${DISCORD_API_VERSION}`;
+const DISCORD_GATEWAY_URL = 'wss://gateway.discord.gg';
+
 export class DiscordClient {
     private botToken: string;
     constructor(
@@ -67,5 +69,52 @@ export class DiscordClient {
         }
         return fetch(url, options)
             .then(response => response.json());
+    }
+}
+
+export class DiscordGatewayClient {
+    private webSocket: WebSocket;
+    private messageCreationHandler: Function;
+    private seq: Number;
+
+    constructor(
+        messageCreationHandler: Function
+    ){
+        this.webSocket = new WebSocket(DISCORD_GATEWAY_URL);
+        this.webSocket.addEventListener("message", (event: MessageEvent) => {
+            const eventDataJson = JSON.parse(event.data);
+            this.seq = eventDataJson.s;
+            const eventType = eventDataJson.t
+            if (eventType === 'MESSAGE_CREATE') {
+                console.log(eventDataJson.d)
+                this.messageCreationHandler(eventDataJson.d);
+            }
+        });
+        this.messageCreationHandler = messageCreationHandler;
+        this.seq = 0;
+    }
+
+    public sendHeartbeat() {
+        const heartbeat = {
+            "op": 1,
+            "d": this.seq
+        }
+        this.webSocket.send(JSON.stringify(heartbeat));
+    }
+
+    public identify(intentNum: number, botToken: string) {
+        const body = {
+            "op": 2,
+            "d": {
+                "intents": intentNum,
+                "token": botToken,
+                "properties": {
+                    "os": "macos",
+                    "device": "macbook",
+                    "browser": "chrome"
+                }
+            }
+        }
+        this.webSocket.send(JSON.stringify(body));
     }
 }
